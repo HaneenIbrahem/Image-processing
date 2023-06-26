@@ -21,7 +21,7 @@ for isy in contours:
         area = cv2.contourArea(isy)
         (x, y, w, h) = cv2.boundingRect(approx)
 
-        if( (area /(w*float (h)))>=0.95and(area /(w*float (h)))<=1.05):
+        if( (area /(w*float (h)))>=0.95 and(area /(w*float (h)))<=1.05):
            cv2.drawContours(img, [isy], 0, (153, 51, 0), -1)
         else:
          cv2.drawContours(img,[isy],0,(0,0,0),-1)
